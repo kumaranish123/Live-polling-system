@@ -1,3 +1,4 @@
-// client/src/socket.js
 import { io } from 'socket.io-client';
-export const socket = io('http://localhost:4000'); // back-end URL
+const backend =
+  import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000';
+export const socket = io(backend);
